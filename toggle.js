@@ -1,9 +1,8 @@
-const mainMenu = document.querySelector('nav-menu');
-const openBurger = document.querySelector('nav-burger');
+const hamburger = document.getElementById('nav-burger');
+const navMenu = document.getElementById('nav-ul');
+const navMenu1 = document.getElementById('nav-ul1');
 
-openBurger.addEventListener('click', show);
-
-function show(){
-    mainMenu.style.display = 'flex'
-    mainMenu.style.top = '0';
-}
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    navMenu1.classList.toggle('show');
+});

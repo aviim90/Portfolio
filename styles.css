@@ -18,11 +18,12 @@ body {
 
 .navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
     height: 120px;
     align-items: center;
-   
+
 }
 
 .logo {
@@ -85,7 +86,7 @@ body {
     font-size: 40px;
     padding: 20px;
     margin-bottom: 10px;
-    
+    cursor: pointer;
 }
 
 
@@ -126,13 +127,32 @@ p {
 
 @media screen and (max-width: 938px) {
 
-    #nav-burger{
-        display:flex;
-
+    .nav-menu, .social-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+        text-align: center;
+        height: 100%;
     }
 
-    .nav-menu, .social-links{
-        display:none;
+    .nav-menu.show,
+    .social-links.show {
+        display: flex;
+    }
+    .projects {
+       
+        font-family: 'Popins', sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+        border: none;
+        border-radius: 0%;
+        height: 0px;
+    }
+
+    #nav-burger {
+        display: block;
+
     }
 
     .main-section {
@@ -140,4 +160,6 @@ p {
         margin: 0 50px;
         text-align: center;
     }
+
+
 }
