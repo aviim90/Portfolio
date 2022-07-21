@@ -131,6 +131,10 @@ p {
 
     }
 
+    .nav-menu, .social-links{
+        display:none;
+    }
+
     .main-section {
 
         margin: 0 50px;
